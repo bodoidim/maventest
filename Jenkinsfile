@@ -1,20 +1,20 @@
 pipeline{
 agent any
   stages{
-    stage('printsomething'){
+    stage('pl_script_detect'){
       when{
-      changelog 'Build'
+      changeset '*.pl'
       }
       steps{
-        echo "MESSAGE PRINT"
+        echo "PL DETECTED"
       }
     }
-    stage('deploy stage'){
+    stage('whenxml'){
       when{
-      changelog 'Deploy'
+      changeset '*.xml'
       }
       steps{
-        echo "this stage will use for deploys"
+        echo "xml detected"
       }
     }
   }
