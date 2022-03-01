@@ -14,7 +14,7 @@ agent any
       changelog 'Deploy'
       }
       steps{
-        echo "this stage will use for deploy"
+        echo "this stage will use for deploys"
       }
     }
   }
